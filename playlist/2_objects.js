@@ -6,16 +6,34 @@
 const smbl = Symbol("key1");
 
 const user = {
-name: "Rabi",
-[smbl] : "mine",
-age:"22",
-email:"rabibhagat789@gmail.com",
-study:"B.tech",
-"country":"nepal",
+  name: "Rabi",
+  [smbl]: smbl, // Assign the symbol itself
+  age: "22",
+  email: "rabibhagat789@gmail.com",
+  study: "B.tech",
+  "country": "nepal",
+};
+/*
+console.log(user.age); // Outputs: "22"
+console.log(user['age']); // Outputs: "22"
+console.log(user["country"]); // Outputs: "nepal"
+console.log(user[smbl]); // Outputs: Symbol(key1)
+console.log(typeof user[smbl]); // Outputs: "symbol"
+*/
 
+
+//function
+
+user.greeting = function(){
+    console.log('this is greeting ');
+    
 }
-console.log(user.age);
-// console.log(user[age]); // take this age as a string
-console.log(user['age']);
-console.log(user["country"]);
-console.log(user[smbl]);
+console.log(user.greeting());
+console.log(user.greeting);
+
+user.greetingtwo = function(){
+    console.log(`this is greeting ,${this.country}`);
+    
+}
+console.log(user.greetingtwo());
+console.log(user.greetingtwo);
