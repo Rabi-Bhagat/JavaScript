@@ -31,13 +31,20 @@ else{
 }
 
 // switch
-const mean = 4;
-switch(mean >4) {
+const mean = 3;
+switch(mean) {
     case 1:
-        console.log("i am  in 1 jan
-            ");
-            default()
+        console.log("i am  in 1 jan ");
+            break;
         
-}case 2:
-console.log(" i am from 2
-    ");
+    case 2:
+    console.log(" i am from 2");
+    break;
+    case 3:
+        console.log(" i am am from 3");
+        break;
+    default:
+        console.log("i am default case");
+        
+        
+    }
