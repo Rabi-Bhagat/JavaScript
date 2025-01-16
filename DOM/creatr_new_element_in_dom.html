@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to study about the creating new element in DOM</title>
+    <style>
+    body{
+        background-color: red;
+    }
+    </style>
 </head>
 <body>
-    
+<div class="cinema">
+    <div class="marvel"> Iron Man</div>
+    <div class="marvel"> Dr.Strange</div>
+    <div class="marvel"> Thanos</div>
+    <div class="marvel"> Captain America</div>
+</div>
 </body>
+ <script>
+    const cinema  = document.querySelector('.cinema')
+    // console.log(cinema);
+    // const abc = (cinema.children)
+    // console.log(cinema.children);
+
+    // for (let i = 0; i < cinema.children.length; i++) {
+    //     console.log(cinema.children[i].innerHTML);
+        
+    // }
+    
+    
+    console.log(cinema.children[1]);
+    
+    cinema.children[1].style.color = "white";
+
+    // the childNodes property is used to retrieve a collection of all child nodes of a given DOM element. This includes:
+
+// Element nodes (e.g., <div>, <p>).
+// Text nodes (e.g., text content between elements).
+// Comment nodes (e.g., <!-- comment -->).
+    console.log("nodes ",cinema.childNodes);
+    
+    
+</script> 
 </html>
