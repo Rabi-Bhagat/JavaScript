@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Bout async and wait</title>
+</head>
+<body>
+
+    <h1>This is all about the project of event</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    const aboutdate = function ( aviable) {
+        console.log(aviable,Date.now());
+    
+    };
+    const clean = setInterval(aboutdate,2000,"cleared");
+    clearInterval(clean)
+
+    // the work of button
+
+    document.querySelector("#start").addEventListener("click",function( ) {
+        // console.log("helloo you click in start button");
+        const strt = setInterval(aboutdate,1000,"the interval is in running state");
+        console.log("interval started");
+        
+        
+
+            
+        } )
+
+        document.querySelector("#stop").addEventListener("click",function () {
+            console.log("hello, you click the stop button");
+        
+            // const stp = function () {
+            //     clearInterval(aboutdate);
+            //     aboutdate= null;
+            //     console.log('stopped');
+                
+                
+            }
+
+
+            // const clean = clearInterval(aboutdate,1000,"cleared");
+            // clearInterval(clean)
+            
+            
+    )
+
+    
+
+</script>
+</html>
