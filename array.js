@@ -3,9 +3,10 @@
 // console.log(n);
 
 
-let n = [1,2,3,4,4]
+// let n = [1,2,3,4,4]
 // n.toLocaleString();
 // console.log(n);
 
-n.join('-')
+// n.join('-')
 
+console.warn("dksnjkdhkjsd");
