@@ -1,18 +1,27 @@
-let sum = (a,b) =>{
-    let c = a + b;
-    return c;
-}
+// let sum = (a,b) =>{
+//     let c = a + b;
+//     return c;
+// }
 
-let y = sum(2,7)
-console.log(y);
+// let y = sum(2,7)
+// console.log(y);
 
 
-//adding function
+// //adding function
 
-function add(a,b) {
-    console.log(a + b);
+// function add(a,b) {
+//     console.log(a + b);
+    
+// }
+
+// add (3 ,5)
+// add ( 4,1)
+
+
+
+function add (x,y){
+    console.log(x+y);
     
 }
 
-add (3 ,5)
-add ( 4,1)
+add(4,5);
