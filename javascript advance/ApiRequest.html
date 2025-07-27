@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>API request and v8 engine</h1>
+</body>
+
+<script>
+    const request = 'https://api.github.com/users/Rabi-Bhagat'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',request)
+    xhr.onreadystatechange =  function () {
+        console.log(xhr.readyState);
+        
+    }
+    xhr.send()
+    
+</script>
+
+</html>
