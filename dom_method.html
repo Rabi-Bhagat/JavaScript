@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        .box {
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid black;
+            display: inline-block;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h2>DOM Manipulation Example</h2>
+    <div id="container" class="box">Main Element</div>
+    <br>
+    <button id="appendBtn">Append Element</button>
+    <button id="prependBtn">Prepend Element</button>
+    <button id="beforeBtn">Insert Before</button>
+    <button id="afterBtn">Insert After</button>
+    <button id="removeBtn">Remove Element</button>
+
+    <script>
+        let container = document.getElementById("container");
+
+        // Append: Adds an element inside at the end
+        document.getElementById("appendBtn").addEventListener("click", function() {
+            let newElement = document.createElement("div");
+            newElement.textContent = "Appended Element";
+            newElement.classList.add("box");
+            container.append(newElement);  // Adds inside, at the end
+        });
+
+        // Prepend: Adds an element inside at the start
+        document.getElementById("prependBtn").addEventListener("click", function() {
+            let newElement = document.createElement("div");
+            newElement.textContent = "Prepended Element";
+            newElement.classList.add("box");
+            container.prepend(newElement);  // Adds inside, at the start
+        });
+
+        // Before: Adds an element before the node (outside)
+        document.getElementById("beforeBtn").addEventListener("click", function() {
+            let newElement = document.createElement("div");
+            newElement.textContent = "Before Element";
+            newElement.classList.add("box");
+            container.before(newElement);  // Adds outside, before
+        });
+
+        // After: Adds an element after the node (outside)
+        document.getElementById("afterBtn").addEventListener("click", function() {
+            let newElement = document.createElement("div");
+            newElement.textContent = "After Element";
+            newElement.classList.add("box");
+            container.after(newElement);  // Adds outside, after
+        });
+
+        // Remove: Deletes the main element
+        document.getElementById("removeBtn").addEventListener("click", function() {
+            container.remove();  // Removes the main element
+        });
+    </script>
+</body>
+</html>
