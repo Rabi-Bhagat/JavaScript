@@ -28,37 +28,37 @@
     <p id="content">This is a paragraph.</p>
 
     <script>
-        // 1️⃣ Get and Set Attribute
+      
         let link = document.getElementById("myLink");
-        console.log("Original Href:", link.getAttribute("href")); // Get the href value
+        console.log("Original Href:", link.getAttribute("href"));
 
         document.getElementById("changeLink").addEventListener("click", function() {
-            link.setAttribute("href", "https://google.com"); // Change href attribute and google is value
-            link.textContent = "Go to Google"; // Change link text
+            link.setAttribute("href", "https://google.com"); 
+            link.textContent = "Go to Google"; 
         });
 
-        // 2️⃣ Modify CSS Styles
+
         let box = document.getElementById("myBox");
         document.getElementById("changeStyle").addEventListener("click", function() {
-            box.style.backgroundColor = "orange"; // Change background color
-            box.style.width = "150px"; // Change width
-            box.style.height = "150px"; // Change height
+            box.style.backgroundColor = "orange"; 
+            box.style.width = "150px";
+            box.style.height = "150px"; 
         });
 
-        // 3️⃣ Add and Remove Elements
+      
         let content = document.getElementById("content");
 
         document.getElementById("addElement").addEventListener("click", function() {
             let newPara = document.createElement("p");
             newPara.textContent = "This is a new paragraph!";
             newPara.classList.add("highlight");
-            document.body.appendChild(newPara); // Append to body
+            document.body.appendChild(newPara); 
         });
 
         document.getElementById("removeElement").addEventListener("click", function() {
             if (content) {
-                content.remove(); // Remove the paragraph
-                content = null; // Set to null to prevent errors
+                content.remove(); 
+                content = null; 
             }
         });
 //
